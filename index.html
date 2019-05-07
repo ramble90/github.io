@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Manual test - Granim</title>
+	<style>
+		body {
+			height: 100%;
+			margin: 0;
+		}
+		#granim-canvas {
+			display: block;
+			width: calc(100% - 0px);
+			min-width: 200px;
+			height: calc(100vh - 0px);
+			min-height: 100px;
+			margin: 0px;
+		}
+	</style>
+</head>
+<body>
+	
+	<canvas id="granim-canvas"></canvas>
+
+	<script src="granim.js"></script>
+	<script>
+		var granimInstance = new Granim({
+    element: '#granim-canvas',
+    direction: 'left-right',
+    isPausedWhenNotInView: true,
+    states : {
+        "default-state": {
+            gradients: [
+                ['#ff9966', '#ff5e62'],
+                ['#00F260', '#0575E6'],
+                ['#e1eec3', '#f05053']
+            ]
+        }
+    }
+});
+	</script>
+</body>
+</html>
