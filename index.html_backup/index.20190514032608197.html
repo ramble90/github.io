@@ -46,7 +46,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>RAMBLE — </title>
+<title>Laundri — 兰德力Wiki</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~--><!--~~ Raw markup ~~-->
 
 
@@ -141,6 +141,8 @@ Error message and password prompt
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/refresh</li>
 
+<li>$:/config/Tiddlers/TitleLinks</li>
+
 <li>$:/core</li>
 
 <li>$:/DefaultTiddlers</li>
@@ -148,6 +150,8 @@ Error message and password prompt
 <li>$:/isEncrypted</li>
 
 <li>$:/language</li>
+
+<li>$:/language/DefaultNewTiddlerTitle</li>
 
 <li>$:/languages/zh-Hans</li>
 
@@ -157,9 +161,15 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/showeditpreview</li>
+
+<li>$:/state/sidebar</li>
+
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
+
+<li>$:/state/tab/moresidebar-1850697562</li>
 
 <li>$:/state/tab/sidebar--595412856</li>
 
@@ -353,9 +363,19 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
-<li>121</li>
+<li>HOME</li>
 
-<li>213123</li>
+<li>客单价</li>
+
+<li>用户数</li>
+
+<li>营收</li>
+
+<li>营销系统</li>
+
+<li>转化率</li>
+
+<li>频次</li>
 
 </ul>
 </p>
@@ -372,6 +392,9 @@ Error message and password prompt
 </div>
 <div created="20190513153242110" modified="20190513153242110" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/refresh">
 <pre>show</pre>
+</div>
+<div created="20190514023440555" modified="20190514023448706" title="$:/config/Tiddlers/TitleLinks">
+<pre>no</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.19">
 <pre>{
@@ -9255,6 +9278,9 @@ Error message and password prompt
 <div title="$:/language">
 <pre>$:/languages/zh-Hans</pre>
 </div>
+<div created="20190514023247405" modified="20190514023248405" title="$:/language/DefaultNewTiddlerTitle">
+<pre>NEW</pre>
+</div>
 <div author="BramChen" core-version="&gt;=5.0.8" dependents="" description="Chinese (Simplified)" name="zh-Hans" plugin-type="language" title="$:/languages/zh-Hans" type="application/json" version="5.1.19">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -12827,22 +12853,31 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20190514022738475" modified="20190514022738475" title="$:/SiteSubtitle">
-<pre></pre>
+<div created="20190514022738475" modified="20190514030702222" title="$:/SiteSubtitle">
+<pre>兰德力Wiki</pre>
 </div>
-<div created="20190514022732441" modified="20190514022733259" title="$:/SiteTitle">
-<pre>RAMBLE</pre>
+<div created="20190514022732441" modified="20190514023233895" title="$:/SiteTitle">
+<pre>Laundri</pre>
 </div>
-<div created="20190513153217678" modified="20190514022719314" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Info</pre>
+<div created="20190514031405993" modified="20190514031405993" title="$:/state/showeditpreview">
+<pre>yes</pre>
 </div>
-<div created="20190513153749777" modified="20190514022704822" title="$:/state/tab-2065006209">
-<pre>$:/core/ui/ControlPanel/Saving/General</pre>
+<div created="20190514031401346" modified="20190514032431730" title="$:/state/sidebar">
+<pre>yes</pre>
 </div>
-<div created="20190513153239556" modified="20190514022849858" title="$:/state/tab/sidebar--595412856">
+<div created="20190513153217678" modified="20190514032435265" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Saving</pre>
+</div>
+<div created="20190513153749777" modified="20190514032531497" title="$:/state/tab-2065006209">
+<pre>$:/core/ui/ControlPanel/Saving/TiddlySpot</pre>
+</div>
+<div created="20190514022913882" modified="20190514022913882" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/All</pre>
+</div>
+<div created="20190513153239556" modified="20190514023649466" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20190514022700712" list="GettingStarted" modified="20190514022850898" title="$:/StoryList">
+<div list="HOME" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -13574,8 +13609,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20190513153227179" dependents="" description="Basic theme" modified="20190513153227179" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" server-url="https://tiddlywiki.com/library/v5.1.19/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.19/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.19">
 <pre></pre>
 </div>
-<div created="20190513153225599" modified="20190513153226422" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
-<pre>SAVE</pre>
+<div created="20190513153225599" modified="20190514023532063" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
+<pre></pre>
 </div>
 <div created="20190513153227140" modified="20190513153227140" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.19/index.html" url="https://tiddlywiki.com/library/v5.1.19/index.html">
 <pre>loaded</pre>
@@ -13689,11 +13724,42 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
     }
 }</pre>
 </div>
-<div created="20190513153640561" modified="20190513153648402" tags="" title="121">
-<pre></pre>
+<div created="20190514023627119" modified="20190514032607891" title="HOME">
+<pre>[[营销系统]]</pre>
 </div>
-<div created="20190513153756755" modified="20190513153759423" tags="" title="213123">
-<pre></pre>
+<div created="20190514025343970" modified="20190514031422681" title="客单价">
+<pre>!! 定义
+用户每次消费的实际消费金额</pre>
+</div>
+<div created="20190514024305959" modified="20190514031657609" title="用户数">
+<pre>!! 定义
+区域下可触达的有效目标用户数量
+
+* 区域：学校、商区、小区
+* 可触达：通过各种营销手段能够告知服务给到用户
+* 目标用户：客观上或多或少需要使用服务的用户
+
+因此用户数也具有它的一个公式
+
+用户数=用户基数*触达率*目标用户比例</pre>
+</div>
+<div created="20190514024027598" modified="20190514024251034" title="营收">
+<pre>!! 营收公式
+营收=[[用户数]]*[[转化率]]*[[客单价]]*[[频次]]</pre>
+</div>
+<div created="20190514022934149" modified="20190514024204969" tags="" title="营销系统">
+<pre>!! 目的
+* 主营业务的[[营收]]提升
+* 内部管理系统化
+* 增值业务拓展</pre>
+</div>
+<div created="20190514025050266" modified="20190514031429817" title="转化率">
+<pre>!! 定义
+用户数里能够被转化成为愿意下单付费的用户数量的比例</pre>
+</div>
+<div created="20190514030832974" modified="20190514031411801" title="频次">
+<pre>!! 定义
+频次是指用户使用服务的次数，但频次的衡量必须要在一个时间区间内才能去做较好的衡量。对于兰德力的服务，一般会取周、月、季、年频次几个时间区间的频次。</pre>
 </div>
 
 </div>

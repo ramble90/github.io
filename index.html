@@ -46,7 +46,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Laundri — </title>
+<title>Laundri — 兰德力Wiki</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~--><!--~~ Raw markup ~~-->
 
 
@@ -160,6 +160,10 @@ Error message and password prompt
 <li>$:/SiteSubtitle</li>
 
 <li>$:/SiteTitle</li>
+
+<li>$:/state/showeditpreview</li>
+
+<li>$:/state/sidebar</li>
 
 <li>$:/state/tab-1749438307</li>
 
@@ -367,9 +371,13 @@ Error message and password prompt
 
 <li>营收</li>
 
+<li>营销方式</li>
+
 <li>营销系统</li>
 
 <li>转化率</li>
+
+<li>频次</li>
 
 </ul>
 </p>
@@ -12847,16 +12855,22 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20190514022738475" modified="20190514022738475" title="$:/SiteSubtitle">
-<pre></pre>
+<div created="20190514022738475" modified="20190514030702222" title="$:/SiteSubtitle">
+<pre>兰德力Wiki</pre>
 </div>
 <div created="20190514022732441" modified="20190514023233895" title="$:/SiteTitle">
 <pre>Laundri</pre>
 </div>
-<div created="20190513153217678" modified="20190514023522834" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Plugins</pre>
+<div created="20190514031405993" modified="20190514031405993" title="$:/state/showeditpreview">
+<pre>yes</pre>
 </div>
-<div created="20190513153749777" modified="20190514022704822" title="$:/state/tab-2065006209">
+<div created="20190514031401346" modified="20190514065218790" title="$:/state/sidebar">
+<pre>yes</pre>
+</div>
+<div created="20190513153217678" modified="20190514032435265" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Saving</pre>
+</div>
+<div created="20190513153749777" modified="20190514032625994" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/General</pre>
 </div>
 <div created="20190514022913882" modified="20190514022913882" title="$:/state/tab/moresidebar-1850697562">
@@ -12865,7 +12879,7 @@ Error message and password prompt
 <div created="20190513153239556" modified="20190514023649466" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20190514025309841" list="HOME 营销系统 营收 客单价 用户数 转化率" modified="20190514025331258" title="$:/StoryList">
+<div created="20190514054303552" list="营销方式 HOME 营销系统 营收 频次 客单价 转化率 用户数" modified="20190514062901999" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -13712,21 +13726,45 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
     }
 }</pre>
 </div>
-<div created="20190514023627119" modified="20190514023656683" title="HOME">
+<div created="20190514023627119" modified="20190514032607891" title="HOME">
 <pre>[[营销系统]]</pre>
 </div>
-<div created="20190514025343970" modified="20190514025535042" title="客单价">
-<pre>用户每次消费的实际消费金额</pre>
+<div created="20190514025343970" modified="20190514062838495" title="客单价">
+<pre>!! 定义
+用户每次消费的实际消费金额
+
+对于整个产品来说，因为各个区域提供的服务基本是一致的，所有各门店的相对服务价格应该是一致的，但不同的服务类型却具有不同的服务价格，如果以各个服务的的服务价格减去即时服务成本可以得到一个服务利润，如果服务利润越高，则对应的服务客单价越高。
+例如：一台烘干机烘干40分钟的电力成本是0.5元，价格是8元，而一台洗衣机标准洗涤40分钟的电力成本是0.5元，水的成本是0.5元，价格是4元。那么烘干服务的的利润远远大于洗衣机。同理，即使都是洗涤服务，不同类型的洗涤服务也不一致。
+
+!! 影响因素
+* 用户习惯：用户的天然习惯是无法提升客单价的，但经过引导的用户习惯可以提高客单价。
+* 服务成本：服务成本越低，可提升的服务利润越高，客单价也相对越高</pre>
 </div>
-<div created="20190514024305959" modified="20190514024918418" title="用户数">
-<pre>!! 区域下可触达的有效目标用户数量
+<div created="20190514024305959" modified="20190514034239353" title="用户数">
+<pre>!! 定义
+区域下可触达的有效目标用户数量
+
 * 区域：学校、商区、小区
 * 可触达：通过各种营销手段能够告知服务给到用户
-* 目标用户：客观上或多或少需要使用服务的用户</pre>
+* 目标用户：客观上或多或少需要使用服务的用户
+
+!! 影响因素
+用户数也具有它的一个公式
+
+用户数=用户基数*目标用户比例*触达率
+
+* 用户基数一般来说都是一个常量，比如虽然一个学校的每年都有新生进入，但也会有老生出去，但对于学校的总学生数量一般不会大变
+* 目标用户比例往往在一个时间段内也是一个常量
+* 触达率和营销手段的有比较强的相关性，触达率的极致就是能做到和目标用户比例是一样的。所以为了保证触达率的最大，营销手段往往需要满足：覆盖广、目标吸引性强。覆盖广是营销手段尽可能的覆盖到整个用户基数，目标性吸引强是希望做到每一个目标用户能够接触了解到我们的服务内容。
+
+这里还有一个平衡性需要考量：就是用户基数越大，往往要付出的营销成本也越大。所以，在做基于人数付成本的营销内容之前，尽可能的优化基数，是目标用户比例最大化是减少营销成本的重要措施。</pre>
 </div>
 <div created="20190514024027598" modified="20190514024251034" title="营收">
 <pre>!! 营收公式
 营收=[[用户数]]*[[转化率]]*[[客单价]]*[[频次]]</pre>
+</div>
+<div created="20190514065220384" modified="20190514065234654" tags="" title="营销方式">
+<pre></pre>
 </div>
 <div created="20190514022934149" modified="20190514024204969" tags="" title="营销系统">
 <pre>!! 目的
@@ -13734,8 +13772,35 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 * 内部管理系统化
 * 增值业务拓展</pre>
 </div>
-<div created="20190514025050266" modified="20190514025217427" title="转化率">
-<pre>用户数里能够被转化成为愿意下单付费的用户数量的比例</pre>
+<div created="20190514025050266" modified="20190514064611957" title="转化率">
+<pre>!! 定义
+已触达的用户里能够被转化成为愿意下单付款的用户数量的比例
+
+!! 影响因素
+因为我们定义真正被转化的用户是需要用户最终下单付款的，因此在下单付款之前的所有流程操作都会影响转化率的提高或降低。
+
+那么在这个过程中可以把影响因素分为这么几个
+
+* 转化稳定性：可以理解为支撑整个转化过程的软件、系统、人、环境等各个因素的稳定性，避免因为过程的稳定性而影响用户转化
+* 转化门槛：转化门槛也会在转化过程中的各个环节体现，比如注册的时候如果需要用户填写身份证号码就会增加用户的注册门槛，因为用户认为自己的隐私不可以被泄露。
+* 转化诱因：最基本的转化诱因应该是产品本身，比如兰德力洗衣服务的最基本诱因就应该是服务的优秀之处。但往往因为有些优势无法被用户马上理解，所以需要增加一些其他的诱因来怎么吸引力或者降低用户的转化门槛，例如烘干的因为价格高且主要在于用户认为自己没有烘干需要，所以我们可以降低门槛让用户先体验后再观察最终用户是否愿意留下长期使用烘干服务。在选择诱因上，应倾向选择能使用户在转化后长期存留的诱因。
+* 用户流转：用户流转往往体现在一个区域或者一个环境下实际用户数的增加和减少，例如校园环境下，学生毕业会造成原有主营业务用户的流失造成转化后的用户数和用户基数都减少。而每次开学的时候新生进入又会使得用户基数增加但实际用户不变，最终使得转化率在一个新的时间点下减少。</pre>
+</div>
+<div created="20190514030832974" modified="20190514065120030" title="频次">
+<pre>!! 定义
+频次是指用户使用服务的次数，但频次的衡量必须要在一个时间区间内才能去做较好的衡量。对于兰德力的服务，一般会取周、月、季、年频次几个时间区间的频次。
+
+!!影响因素
+理论上，对于洗烘服务来说，一段时间下的可观服务频次是固定的。举例来说：一个门店的洗衣机，每台一天12小时最多可以进行20次36分钟一次的最短时间的洗涤服务。所以在这个客观条件下尽可能的提高门店辐射区域下的用户洗衣频次来接近这个最大洗衣频次。
+
+所以以下几个因素会对频次产品影响：
+
+* 理论峰值频次：即一个设备满打满算的最大服务频次，这个频次可能因为不同区域的服务时长、设备类型、服务设定有所不同，但对于每一个区域基本是一个常量，但可以根据运营情况更改这个常量，比如增减设备。
+* 用户习惯：同样将用户的天然习惯引导为客观合理的使用习惯以提高频次。
+* 客观环境：如季节、天气等原因会使得服务频次上升。
+* 服务价格：更低的价格可能会使得频次上升
+* 服务体验：更好的服务体验会使得用户更愿意多次使用服务。
+</pre>
 </div>
 
 </div>
